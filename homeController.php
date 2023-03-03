@@ -2,12 +2,6 @@
 // homeController.php
 declare(strict_types = 1);
 
-require_once 'vendor/autoload.php';
+require_once 'bootstrap.php';
 
-use App\Services\TwigService;
-
-
-$twigService = new TwigService();
-
-$twigService->addParameter('header', 'Home');
-$twigService->renderPage('home/index.twig');
+include_once 'App/Views/home/index.php';
