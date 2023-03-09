@@ -1,6 +1,2 @@
 .idea/
 vendor/
-public/bootstrap/
-database.yml
-mailer.yml
-App/Logs/*.log

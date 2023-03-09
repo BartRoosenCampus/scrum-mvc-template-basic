@@ -1,9 +1,0 @@
-<Files "makepage.php">
-  Order Allow,Deny
-  Deny from all
-</Files>
-
-<Files "viewlog.php">
-  Order Allow,Deny
-  Deny from all
-</Files>

@@ -1,3 +1,3 @@
 # Data
 
-Create your data handler classes in this folder
+Maak in deze folder alle Data klassen

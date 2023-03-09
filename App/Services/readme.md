@@ -1,3 +1,3 @@
 # Services
 
-Create your service (business) classes in this folder
+Zet in deze folder alle Services (Business) klassen 

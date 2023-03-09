@@ -1,3 +1,3 @@
 # JavaScript
 
-Place all your JavaScript in this folder
+Zet alle JavaScript files in deze folder
