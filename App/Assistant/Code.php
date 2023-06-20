@@ -15,5 +15,7 @@ class Code
         exec('git add .');
         exec($commandCommit);
         exec('git push');
+
+        echo "\n\n";
     }
 }
