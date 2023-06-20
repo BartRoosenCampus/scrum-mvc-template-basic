@@ -4,6 +4,6 @@ declare(strict_types = 1);
 
 require_once 'bootstrap.php';
 
-$title = 'Home';
+$title = '%s';
 
-include_once 'App/Views/home/home.php';
+include_once '%s';

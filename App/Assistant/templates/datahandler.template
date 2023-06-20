@@ -1,0 +1,8 @@
+<?php
+
+namespace App\Data;
+
+class %s
+{
+    //code goes here...
+}
