@@ -12,7 +12,11 @@ class Code
         $message = readline('Commit message: ');
 
         if ('' === $message) {
-            echo "\n\nDefault commit message will be used";
+            Text::write('Default commit message will be used', Config::TEXT_YELLOW);
+
+//            echo Config::TEXT_YELLOW;
+//            echo "\nDefault commit message will be used\n\n";
+//            echo Config::TEXT_WHITE;
             $message = 'Automated commit and push';
         }
 

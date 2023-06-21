@@ -19,9 +19,9 @@ class Datahandler extends ContentGetter
         $file = sprintf('App/Data/%s.php', $name);
 
         if (file_exists($file)) {
-            echo "\e[31m";
+            echo Config::TEXT_RED;
             echo sprintf("\n\nAbort!!! %s already exists\n\n", $file);
-            echo "\e[39m";
+            echo Config::TEXT_WHITE;
             sleep(3);
         } else {
             if (null !== $extendsClass) {
