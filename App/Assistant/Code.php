@@ -13,10 +13,6 @@ class Code
 
         if ('' === $message) {
             Text::write('Default commit message will be used', Config::TEXT_YELLOW);
-
-//            echo Config::TEXT_YELLOW;
-//            echo "\nDefault commit message will be used\n\n";
-//            echo Config::TEXT_WHITE;
             $message = 'Automated commit and push';
         }
 
@@ -24,8 +20,11 @@ class Code
         $commandCommit = sprintf('git commit -m"%s"', $commitMessage);
 
         exec('git add .');
+        Text::write('Git add . done', Config::TEXT_YELLOW);
         exec($commandCommit);
+        Text::write(sprintf('Commit done with message: %s', $message), Config::TEXT_YELLOW);
         exec('git push');
+        Text::write('Git push done', Config::TEXT_YELLOW);
 
         echo "\n\n";
     }
