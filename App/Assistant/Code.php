@@ -19,12 +19,11 @@ class Code
         $commitMessage = sprintf($messageFormat, $timeStamp, $message);
         $commandCommit = sprintf('git commit -m"%s"', $commitMessage);
 
+        Text::write(sprintf('Your code will be pushed with message: %s', $commitMessage), Config::TEXT_YELLOW);
+
         exec('git add .');
-        Text::write('Git add . done', Config::TEXT_YELLOW);
         exec($commandCommit);
-        Text::write(sprintf('Commit done with message: %s', $message), Config::TEXT_YELLOW);
         exec('git push');
-        Text::write('Git push done', Config::TEXT_YELLOW);
 
         echo "\n\n";
     }
