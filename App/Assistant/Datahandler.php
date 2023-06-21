@@ -2,7 +2,7 @@
 
 namespace App\Assistant;
 
-class Datahandler
+class Datahandler extends ContentGetter
 {
     public static function create()
     {
@@ -31,7 +31,7 @@ class Datahandler
             }
 
             $content = sprintf(
-                file_get_contents('App/Assistant/templates/datahandler.template'),
+                self::getContent(Config::TEMPLATE_DATA_HANDLER),
                 $insert,
             );
 

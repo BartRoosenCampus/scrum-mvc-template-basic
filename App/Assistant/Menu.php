@@ -16,7 +16,7 @@ class Menu
         echo "Opties\n";
         echo "------\n";
         echo "\e[93m";
-        foreach (self::$options as $key => $value) {
+        foreach (Config::ACTIONS_OPTIONS as $key => $value) {
             echo sprintf('[%s] %s', $key, $value);
         }
         echo "\e[39m";
