@@ -17,9 +17,9 @@ class Config
 
     //Actions
     const ACTIONS_OPTIONS = [
-        1   => "Nieuwe pagina toevoegen\n",
-        2   => "Een DataHandler toevoegen\n",
-        "C" => "Commit and push your code\n",
+        1   => "Nieuwe pagina toevoegen",
+        2   => "Een DataHandler toevoegen",
+        "C" => "Commit and push your code",
         "q" => "Quit\n",
     ];
 
