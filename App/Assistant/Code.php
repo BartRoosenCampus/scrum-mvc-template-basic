@@ -12,13 +12,9 @@ class Code
         $commitMessage = sprintf($messageFormat, $timeStamp, $message);
         $commandCommit = sprintf('git commit -m"%s"', $commitMessage);
 
-        exec('git status');
         exec('git add .');
-        exec('git status');
         exec($commandCommit);
-        exec('git status');
         exec('git push');
-        exec('git status');
 
         echo "\n\n";
     }

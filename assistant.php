@@ -21,7 +21,6 @@ while ($continue) {
             break;
         case "C":
             Code::commitAndPush();
-            $continue = false;
             break;
         case "q":
         default:
