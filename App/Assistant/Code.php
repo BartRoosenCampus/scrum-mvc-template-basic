@@ -8,7 +8,14 @@ class Code
     {
         $timeStamp     = date('Y-m-d H:i:s');
         $messageFormat = '%s => %s';
-        $message       = 'Automated commit and push';
+
+        $message = readline('Commit message: ');
+
+        if ('' === $message) {
+            echo "\n\nDefault commit message will be used";
+            $message = 'Automated commit and push';
+        }
+
         $commitMessage = sprintf($messageFormat, $timeStamp, $message);
         $commandCommit = sprintf('git commit -m"%s"', $commitMessage);
 
