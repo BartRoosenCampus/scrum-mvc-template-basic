@@ -13,13 +13,10 @@ class Menu
 
     public static function draw()
     {
-        echo "Opties\n";
-        echo "------\n";
-        echo "\e[93m";
+        Text::write('Opties', Config::TEXT_YELLOW, true);
         foreach (Config::ACTIONS_OPTIONS as $key => $value) {
-            echo sprintf('[%s] %s', $key, $value);
+            Text::write(sprintf('[%s] %s', $key, $value), Config::TEXT_YELLOW, false);
         }
-        echo "\e[39m";
 
         return readline("Kies een optie: ");
     }

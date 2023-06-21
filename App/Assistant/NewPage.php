@@ -6,8 +6,7 @@ class NewPage extends ContentGetter
 {
     public static function create()
     {
-        echo "\nNew page";
-        echo "\n--------\n";
+        Text::write('New page', Config::TEXT_YELLOW, true);
         $name       = readline("Page Name: ");
         $viewFolder = readline("View folder: ");
         $controller = readline("Controller [Y/N]: ");
