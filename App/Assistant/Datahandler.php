@@ -6,7 +6,8 @@ class Datahandler extends ContentGetter
 {
     public static function create()
     {
-        Text::write('New DataHandler', Config::TEXT_YELLOW, true);
+        Toolbox::clearScreen();
+        Toolbox::writeText('New DataHandler', Config::TEXT_YELLOW, true);
         $name         = readline("Name: ");
         $extends      = readline("Does this data handler extends another class? [Y/N]: ");
         $extendsClass = null;
@@ -18,7 +19,7 @@ class Datahandler extends ContentGetter
         $file = sprintf('App/Data/%s.php', $name);
 
         if (file_exists($file)) {
-            Text::write('Abort!!! %s already exists', Config::TEXT_RED);
+            Toolbox::writeText('Abort!!! %s already exists', Config::TEXT_RED);
             sleep(3);
         } else {
             if (null !== $extendsClass) {

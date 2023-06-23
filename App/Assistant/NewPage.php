@@ -6,7 +6,9 @@ class NewPage extends ContentGetter
 {
     public static function create()
     {
-        Text::write('New page', Config::TEXT_YELLOW, true);
+        Toolbox::clearScreen();
+
+        Toolbox::writeText('New page', Config::TEXT_YELLOW, true);
         $name       = readline("Page Name: ");
         $viewFolder = readline("View folder: ");
         $controller = readline("Controller [Y/N]: ");
@@ -41,5 +43,8 @@ class NewPage extends ContentGetter
                 file_get_contents(Config::NAVBAR) . "\n" . $itemHtml
             );
         }
+
+        Toolbox::writeText("New page created", Config::TEXT_YELLOW);
+        sleep(3);
     }
 }

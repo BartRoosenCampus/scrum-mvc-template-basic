@@ -19,6 +19,9 @@ while ($continue) {
         case 2:
             Datahandler::create();
             break;
+        case 3:
+            echo chr(27).chr(91).'H'.chr(27).chr(91).'J';
+            break;
         case "C":
             Code::commitAndPush();
             $continue = false;

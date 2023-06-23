@@ -19,6 +19,7 @@ class Config
     const ACTIONS_OPTIONS = [
         1   => "Nieuwe pagina toevoegen",
         2   => "Een DataHandler toevoegen",
+        3   => "test clear screen",
         "C" => "Commit and push your code",
         "q" => "Quit\n",
     ];

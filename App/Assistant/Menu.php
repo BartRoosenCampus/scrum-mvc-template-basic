@@ -6,9 +6,10 @@ class Menu
 {
     public static function draw()
     {
-        Text::write('Opties', Config::TEXT_YELLOW, true);
+        Toolbox::clearScreen();
+        Toolbox::writeText('Opties', Config::TEXT_YELLOW, true);
         foreach (Config::ACTIONS_OPTIONS as $key => $value) {
-            Text::write(sprintf('[%s] %s', $key, $value), Config::TEXT_YELLOW, false);
+            Toolbox::writeText(sprintf('[%s] %s', $key, $value), Config::TEXT_YELLOW, false);
         }
 
         return readline("Kies een optie: ");
